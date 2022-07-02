@@ -19,9 +19,9 @@ mongoose.connect("mongodb://127.0.0.1:27017/mern-to",{
     catch(console.error);
 
 app.get('/todos',async(req,res ) =>{ 
-    const todos = await Todo.find();
+    const todos = await Todo.find();    //Todo is mongoose db and in todos all the data is stored after finding 
 
-    res.json(todos );
+    res.json(todos);                    // THis todos is the response that is to be ganerated
 })
 
 app.listen(3001,()=> console.log("Server started on port 3001") );
